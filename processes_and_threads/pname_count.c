@@ -4,6 +4,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <string.h>
 
 #define PNAME "(genenv)"
 #define BUF_SIZE 50
@@ -28,7 +29,7 @@ int main() {
 		int f = open(stat_file, O_RDONLY);
 		read(f, buf, BUF_SIZE);
 		sscanf(buf, "%d %s", &pid, pname);
-		if (pname == PNAME) {
+		if (!strcmp(pname, PNAME)) {
 			++count;
 		}
 	}
