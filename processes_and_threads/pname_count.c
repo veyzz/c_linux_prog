@@ -33,6 +33,7 @@ int main() {
 			++count;
 		}
 	}
+	closedir(dir);
 	printf("%d\n", count);
 	return 0;
 }
