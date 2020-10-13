@@ -1,3 +1,6 @@
+daemon:
+	gcc daemon.c -o solution
+
 sig_count:
 	gcc sig_count.c -o solution
 
