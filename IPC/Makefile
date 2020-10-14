@@ -1,3 +1,6 @@
+shared_memory:
+	gcc -std=c99 shared_memory.c -o solution
+
 daemon:
 	gcc daemon.c -o solution
 
